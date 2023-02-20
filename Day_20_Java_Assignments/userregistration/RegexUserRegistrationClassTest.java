@@ -13,112 +13,112 @@ public class RegexUserRegistrationClassTest {
 	//FirstName Test Cases
 	@Test
 	public void isFirstCapitalTestOne() {
-		assertTrue(reg.isFirstCapital("Durga"));
+		assertTrue(reg.isFirstCapital("Soumya"));
 	}
 	@Test
 	public void isFirstCapitalTestTwo() {
-		assertFalse(reg.isFirstCapital("DURGA"));
+		assertFalse(reg.isFirstCapital("SOUMYA"));
 	}
 	@Test
 	public void isFirstCapitalTestThree() {
-		assertFalse(reg.isFirstCapital("DuRgA"));
+		assertFalse(reg.isFirstCapital("SoUmYa"));
 	}
 	@Test
 	public void isFirstCapitalTestFour() {
-		assertFalse(reg.isFirstCapital("durga"));
+		assertFalse(reg.isFirstCapital("dsoumya"));
 	}
 	@Test
 	public void isFirstCapitalTestFive() {
-		assertFalse(reg.isFirstCapital("dURGA"));
+		assertFalse(reg.isFirstCapital("sOUMYA"));
 	}
-	
-//LastName Test Cases
-	
+
+	//LastName Test Cases
+
 	@Test
 	public void isLastCapitalTestOne() {
-		assertTrue(reg.isLastCapital("Pradhan"));
+		assertTrue(reg.isLastCapital("Sourav"));
 	}
 	@Test
 	public void isLastCapitalTestTwo() {
-		assertFalse(reg.isLastCapital("PRADHAN"));
+		assertFalse(reg.isLastCapital("SOURAV"));
 	}
 	@Test
 	public void isLastCapitalTestThree() {
-		assertFalse(reg.isLastCapital("PraDHaN"));
+		assertFalse(reg.isLastCapital("SoRaV"));
 	}
 	@Test
 	public void isLastCapitalTestFour() {
-		assertFalse(reg.isLastCapital("pradhan"));
+		assertFalse(reg.isLastCapital("sourav"));
 	}
 	@Test
 	public void isLastCapitalTestFive() {
-		assertFalse(reg.isLastCapital("pRADHAN"));
+		assertFalse(reg.isLastCapital("sOURAV"));
 	}
 
-//Email Id Test Case
-	
+	//Email Id Test Case
+
 	@Test
 	public void validEmailIdTestOne() {
-		assertTrue(reg.validEmailId("durga.prasad@bl.co"));
+		assertTrue(reg.validEmailId("soumya.sourav@sm.co"));
 	}
 	@Test
 	public void validEmailIdTestTwo() {
-		assertTrue(reg.validEmailId("durgaprasad@bl.co.in"));
+		assertFalse(reg.validEmailId("soumyasourav@sm.co.in"));
 	}
 	@Test
 	public void validEmailIdTestThree() {
-		assertTrue(reg.validEmailId("durga.prasad@bl.co.in"));
+		assertTrue(reg.validEmailId("soumya.sourav@sm.co.in"));
 	}
 	@Test
 	public void validEmailIdTestFour() {
-		assertFalse(reg.validEmailId("Durga.prasad@bl.co.in"));
+		assertFalse(reg.validEmailId("Soumya.sourav@sm.co.in"));
 	}
 	@Test
 	public void validEmailIdTestFive() {
-		assertFalse(reg.validEmailId("durga.Prasad@bl.co.in"));
+		assertFalse(reg.validEmailId("soumya.Sourav@sm.co.in"));
 	}
 	@Test
 	public void validEmailIdTestSix() {
-		assertFalse(reg.validEmailId("durga.prasad@gmail.co.in"));
+		assertFalse(reg.validEmailId("soumya.sourav@gmail.co.in"));
 	}
 	@Test
 	public void validEmailIdTestSeven() {
-		assertFalse(reg.validEmailId("durga.prasad@bl.in"));
+		assertFalse(reg.validEmailId("soumya.sourav@sm.in"));
 	}
 	@Test
 	public void validEmailIdTestEight() {
-		assertFalse(reg.validEmailId("durga.prasad@blco.in"));
+		assertFalse(reg.validEmailId("soumya.sourav@sm.o.in"));
 	}
 	@Test
 	public void validEmailIdTestNine() {
-		assertFalse(reg.validEmailId("durga.prasad@bl..co,in"));
+		assertFalse(reg.validEmailId("soumya.sourav@sm..co,in"));
 	}
 	@Test
 	public void validEmailIdTestTen() {
-		assertFalse(reg.validEmailId("durga.prasad$bl."));
+		assertFalse(reg.validEmailId("soumya.sourav$sm."));
 	}
 	@Test
 	public void validEmailIdTestEleven() {
-		assertFalse(reg.validEmailId("durga.prasadbl."));
+		assertFalse(reg.validEmailId("soumya.souravsm."));
 	}
-	
-//Mobile Number Test Cases
-	
+
+	//Mobile Number Test Cases
+
 	@Test
 	public void validMobileNumberTestOne() {
-		assertTrue(reg.validMobileNumber("916885213545"));
+		assertTrue(reg.validMobileNumber("919945787845"));
 	}
 	@Test
 	public void validMobileNumberTestTwo() {
-		assertTrue(reg.validMobileNumber("917885213545"));
+		assertTrue(reg.validMobileNumber("919658611213"));
 	}
 	@Test
 	public void validMobileNumberTestThree() {
-		assertTrue(reg.validMobileNumber("918885213545"));
+		assertTrue(reg.validMobileNumber("918887485475"));
 	}
 	@Test
 	public void validMobileNumberTestFour() {
-		assertTrue(reg.validMobileNumber("919885213545"));
+		assertTrue(reg.validMobileNumber("919934567899"));
 	}
 	@Test
 	public void validMobileNumberTestFive() {
@@ -130,62 +130,62 @@ public class RegexUserRegistrationClassTest {
 	}
 	@Test
 	public void validMobileNumberTestSeven() {
-		assertFalse(reg.validMobileNumber("9178852135459"));
+		assertFalse(reg.validMobileNumber("915852135459"));
 	}
 	@Test
 	public void validMobileNumberTestEight() {
-		assertFalse(reg.validMobileNumber("7885213545"));
+		assertFalse(reg.validMobileNumber("9658611213"));
 	}
 	@Test
 	public void validMobileNumberTestNine() {
-		assertFalse(reg.validMobileNumber("07885213545"));
+		assertFalse(reg.validMobileNumber("09658611213"));
 	}
 	@Test
 	public void validMobileNumberTestTen() {
-		assertFalse(reg.validMobileNumber("91-7885213545"));
+		assertFalse(reg.validMobileNumber("91-9658611213"));
 	}
 	@Test
 	public void validMobileNumberTestEleven() {
-		assertFalse(reg.validMobileNumber("+917885213545"));
+		assertFalse(reg.validMobileNumber("+919658611213"));
 	}
 
-//Password Test Cases
-	
+	//Password Test Cases
+
 	@Test
 	public void setPasswordTestOne() {
-		assertTrue(reg.setPassword("dur98G@99sdpra"));
+		assertTrue(reg.setPassword("sam77G@45musician"));
 	}
 	@Test
 	public void setPasswordTestTwo() {
-		assertTrue(reg.setPassword("98G@99sdpra"));
+		assertTrue(reg.setPassword("77G@45musician"));
 	}
 	@Test
 	public void setPasswordTestThree() {
-		assertTrue(reg.setPassword("G@99fdpra"));
+		assertTrue(reg.setPassword("G@45musician"));
 	}
 	@Test
 	public void setPasswordTestFour() {
-		assertTrue(reg.setPassword("AG@99sdpra"));
+		assertTrue(reg.setPassword("AG@45musician"));
 	}
 	@Test
 	public void setPasswordTestFive() {
-		assertFalse(reg.setPassword("dur98G@99"));
+		assertFalse(reg.setPassword("sam77G@45"));
 	}
 	@Test
 	public void setPasswordTestSix() {
-		assertFalse(reg.setPassword("dur98@99sdpra"));
+		assertFalse(reg.setPassword("sam77@45musician"));
 	}
 	@Test
 	public void setPasswordTestSeven() {
-		assertFalse(reg.setPassword("dur98G99sdpra"));
+		assertFalse(reg.setPassword("sam77G45musician"));
 	}
 	@Test
 	public void setPasswordTestEight() {
-		assertFalse(reg.setPassword("dur98G@sdpra"));
+		assertFalse(reg.setPassword("sam77G@musician"));
 	}
 	@Test
 	public void setPasswordTestNine() {
-		assertFalse(reg.setPassword("d98G@9a"));
+		assertFalse(reg.setPassword("s7G@5m"));
 	}
-	
+
 }
